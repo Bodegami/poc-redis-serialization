@@ -1,0 +1,56 @@
+{
+	"info": {
+		"_postman_id": "78195ddf-7e8c-4840-b867-a4ae4125af03",
+		"name": "redis-serialization",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Insert Pessoa",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Renato\",\r\n    \"documento\": \"405682825\",\r\n    \"descricao\": \"negro, alto e folgado\",\r\n    \"pets\": [\r\n        {\r\n            \"nome\": \"Bart\",\r\n            \"raça\": \"TESTE\",\r\n            \"idade\": 7\r\n        },\r\n        {\r\n            \"nome\": \"Brigs\",\r\n            \"raça\": \"Cooker\",\r\n            \"idade\": 5\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Pessoa",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
